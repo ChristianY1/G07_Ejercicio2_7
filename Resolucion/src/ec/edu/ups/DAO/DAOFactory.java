@@ -10,6 +10,11 @@ public abstract class DAOFactory {
 		return factory;
 	}
 	
+	public abstract PacienteDAO getPacienteDAO();
+	public abstract CitaDAO getCitaDAO();
+	public abstract ConsultaMedicaDAO getConsultaMedicaDAO();
+	public abstract MedicinaDAO getMedicinaDAO();
+	public abstract CertificadosDAO getCertificadoDAO();
 	
 	
 
