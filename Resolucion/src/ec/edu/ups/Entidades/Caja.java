@@ -24,7 +24,7 @@ public class Caja implements Serializable {
 	private String fecha;
 	private int numero;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "caja")
-	private Set<CuentaContable> cContables = new HashSet<CuentaContable>();
+	private Set<ComprobanteDeVenta> cdv = new HashSet<ComprobanteDeVenta>();
 	
 	
 	

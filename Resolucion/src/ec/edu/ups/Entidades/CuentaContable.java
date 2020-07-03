@@ -17,22 +17,14 @@ public class CuentaContable implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codigo;
-	@ManyToOne
-	@JoinColumn
-	private Caja caja;
+	
 
 	public CuentaContable() {
 		
 		super();
 	}
 
-	public Caja getCaja() {
-		return caja;
-	}
-
-	public void setCaja(Caja caja) {
-		this.caja = caja;
-	}
+	
 
 	@Override
 	public int hashCode() {
@@ -58,7 +50,7 @@ public class CuentaContable implements Serializable {
 
 	@Override
 	public String toString() {
-		return "CuentaContable [codigo=" + codigo + ", caja=" + caja + "]";
+		return "CuentaContable [codigo=" + codigo + "]";
 	}
 	
 	
