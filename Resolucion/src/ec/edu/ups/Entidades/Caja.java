@@ -2,6 +2,7 @@ package ec.edu.ups.Entidades;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -20,9 +21,8 @@ public class Caja implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codigoCaja;
-	private String tipo;
-	private String fecha;
-	private int numero;
+	private List<ComprobanteDeVenta> cvdList;
+	private List<Sueldo> sueldoList;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "caja")
 	private Set<ComprobanteDeVenta> cdv = new HashSet<ComprobanteDeVenta>();
 	
@@ -31,8 +31,46 @@ public class Caja implements Serializable {
 	public Caja() {
 		super();
 	}
-
 	
+	
+
+
+
+	public Caja(List<ComprobanteDeVenta> cvdList, List<Sueldo> sueldoList) {
+		super();
+		this.cvdList = cvdList;
+		this.sueldoList = sueldoList;
+	}
+
+
+
+
+	public List<ComprobanteDeVenta> getCvdList() {
+		return cvdList;
+	}
+
+
+
+
+	public void setCvdList(List<ComprobanteDeVenta> cvdList) {
+		this.cvdList = cvdList;
+	}
+
+
+
+
+	public List<Sueldo> getSueldoList() {
+		return sueldoList;
+	}
+
+
+
+
+	public void setSueldoList(List<Sueldo> sueldoList) {
+		this.sueldoList = sueldoList;
+	}
+
+
 
 
 	public int getCodigoCaja() {
@@ -46,40 +84,10 @@ public class Caja implements Serializable {
 	}
 
 
+	
 
-	public String getTipo() {
-		return tipo;
-	}
+	
 
-
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
-
-
-	public String getFecha() {
-		return fecha;
-	}
-
-
-
-	public void setFecha(String fecha) {
-		this.fecha = fecha;
-	}
-
-
-
-	public int getNumero() {
-		return numero;
-	}
-
-
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
 
 
 
@@ -109,11 +117,14 @@ public class Caja implements Serializable {
 
 
 
+
 	@Override
 	public String toString() {
-		return "Caja [codigoCaja=" + codigoCaja + ", tipo=" + tipo + ", fecha=" + fecha + ", numero=" + numero + "]";
+		return "Caja [codigoCaja=" + codigoCaja + ", cvdList=" + cvdList + ", sueldoList=" + sueldoList + "]";
 	}
 	
+	
+
 	
    
 }
