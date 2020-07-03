@@ -1,6 +1,9 @@
 package ec.edu.ups.Entidades;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 
 /**
@@ -20,6 +23,8 @@ public class Caja implements Serializable {
 	private String tipo;
 	private String fecha;
 	private int numero;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "caja")
+	private Set<CuentaContable> cContables = new HashSet<CuentaContable>();
 	
 	
 	
@@ -27,6 +32,7 @@ public class Caja implements Serializable {
 		super();
 	}
 
+	
 
 
 	public int getCodigoCaja() {

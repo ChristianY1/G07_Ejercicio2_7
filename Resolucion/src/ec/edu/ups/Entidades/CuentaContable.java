@@ -25,5 +25,42 @@ public class CuentaContable implements Serializable {
 		
 		super();
 	}
+
+	public Caja getCaja() {
+		return caja;
+	}
+
+	public void setCaja(Caja caja) {
+		this.caja = caja;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + codigo;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CuentaContable other = (CuentaContable) obj;
+		if (codigo != other.codigo)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "CuentaContable [codigo=" + codigo + ", caja=" + caja + "]";
+	}
+	
+	
    
 }
