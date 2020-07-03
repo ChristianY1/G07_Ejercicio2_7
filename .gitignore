@@ -1,3 +1,7 @@
 
 Resolucion/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
 Resolucion/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+Resolucion/target/m2e-wtp/web-resources/META-INF/maven/com.mantenimiento/Resolucion/pom.properties
+*.xml
+Resolucion/src/META-INF/persistence.xml
+Resolucion/target/m2e-wtp/web-resources/META-INF/maven/com.mantenimiento/Resolucion/pom.properties
