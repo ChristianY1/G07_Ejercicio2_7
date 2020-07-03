@@ -7,7 +7,7 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-import ec.ups.edu.Controlador.CajaControlador;
+
 
 /**
  * Entity implementation class for Entity: Caja

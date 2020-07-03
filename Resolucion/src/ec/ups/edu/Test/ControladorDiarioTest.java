@@ -1,6 +1,3 @@
-/**
- * 
- */
 package ec.ups.edu.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,22 +6,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-/**
- * @author ACER
- *
- */
-class CajaControladorTest {
+class ControladorDiarioTest {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@BeforeEach
 	void setUp() throws Exception {
 	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@AfterEach
 	void tearDown() throws Exception {
 	}
