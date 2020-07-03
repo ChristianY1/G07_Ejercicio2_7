@@ -30,7 +30,8 @@ public class Caja implements Serializable  {
 	@ManyToOne
 	@JoinColumn
 	private CuentaContable cuenta_contable;
-	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "caja_diario")
+	private Set<Diario> diario = new HashSet<Diario>();
 	
 	
 	
