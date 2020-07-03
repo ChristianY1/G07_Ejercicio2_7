@@ -16,6 +16,8 @@ public abstract class DAOFactory {
 	public abstract ConsultaMedicaDAO getConsultaMedicaDAO();
 	public abstract MedicinaDAO getMedicinaDAO();
 	public abstract CertificadosDAO getCertificadoDAO();
+	public abstract FacturaDAO getFacturaDAO();
+	public abstract FacturaDetalleDAO getFacturaDetalleDAO();
 	
 	
 
