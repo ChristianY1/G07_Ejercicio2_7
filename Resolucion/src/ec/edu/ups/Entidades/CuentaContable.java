@@ -1,6 +1,9 @@
 package ec.edu.ups.Entidades;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 
 /**
@@ -23,6 +26,14 @@ public class CuentaContable implements Serializable {
 	private double debe;
 	private double haber;
 	private double saldo;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "cuenta_contable")
+	private Set<Caja> cajas = new HashSet<Caja>();
+	
+	
+	
+	
+	
+	
 	
 
 	public CuentaContable() {

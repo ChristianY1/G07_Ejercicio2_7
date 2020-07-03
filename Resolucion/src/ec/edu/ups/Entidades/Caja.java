@@ -7,6 +7,8 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+import ec.ups.edu.Controlador.CajaControlador;
+
 /**
  * Entity implementation class for Entity: Caja
  *
@@ -25,6 +27,11 @@ public class Caja implements Serializable  {
 	private List<Sueldo> sueldoList;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "caja")
 	private Set<ComprobanteDeVenta> cdv = new HashSet<ComprobanteDeVenta>();
+	@ManyToOne
+	@JoinColumn
+	private CuentaContable cuenta_contable;
+	
+	
 	
 	
 	
