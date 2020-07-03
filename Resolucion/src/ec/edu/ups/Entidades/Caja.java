@@ -13,7 +13,7 @@ import javax.persistence.*;
  */
 @Entity
 
-public class Caja implements Serializable {
+public class Caja implements Serializable  {
 
 	
 	private static final long serialVersionUID = 1L;
