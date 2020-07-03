@@ -7,6 +7,9 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
 	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 	<class>ec.edu.ups.Entidades.Usuario</class>
 	<class>ec.edu.ups.Entidades.Paciente</class>
+	<class>ec.edu.ups.Entidades.CuentaContable</class>
+	<class>ec.edu.ups.Entidades.Caja</class>
+	<class>ec.edu.ups.Entidades.ComprobanteDeVenta</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/mydb3?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
