@@ -1,4 +1,4 @@
-package ec.ups.edu.Test;
+package ec.edu.ups.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 

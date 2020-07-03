@@ -1,4 +1,4 @@
-package ec.ups.edu.Controlador;
+package ec.edu.ups.Controlador;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

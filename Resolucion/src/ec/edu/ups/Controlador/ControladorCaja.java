@@ -1,4 +1,4 @@
-package ec.ups.edu.Controlador;
+package ec.edu.ups.Controlador;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ControladorDiario
+ * Servlet implementation class ControladorCaja
  */
-@WebServlet("/ControladorDiario")
-public class ControladorDiario extends HttpServlet {
+@WebServlet("/ControladorCaja")
+public class ControladorCaja extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControladorDiario() {
+    public ControladorCaja() {
         super();
         // TODO Auto-generated constructor stub
     }
