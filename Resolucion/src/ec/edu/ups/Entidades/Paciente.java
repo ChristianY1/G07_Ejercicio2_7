@@ -28,14 +28,12 @@ public class Paciente implements Serializable {
 	private List<Certificados> certificadosList = new ArrayList<Certificados>();
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "datosPaciente")
 	private List<Factura> facturaList = new ArrayList<Factura>();
-	
-	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "paciente")
+	private List<Reporte> reporteList = new ArrayList<Reporte>();
 
 	public Paciente() {
 		super();
 	}
-
-
 
 	public Paciente(String tipoSangre, String historialPaciente) {
 		super();
