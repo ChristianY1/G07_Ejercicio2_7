@@ -4,7 +4,7 @@ import ec.edu.ups.DAO.DAOFactory;
 import ec.edu.ups.DAO.UsuarioDAO;
 import ec.edu.ups.Entidades.Usuario;
 
-public class testPaciente {
+public class testUsuario {
 
 	public static void main(String[] args) {
 		
