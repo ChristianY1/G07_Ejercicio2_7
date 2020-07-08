@@ -24,9 +24,10 @@ public class Reporte implements Serializable{
 	@ManyToOne
 	@JoinColumn
 	private LibroDiario libroDiario;
+	/*
 	@ManyToOne
 	@JoinColumn
-	private Paciente paciente;
+	private Paciente paciente;*/
 	@ManyToOne
 	@JoinColumn
 	private Medico medico;

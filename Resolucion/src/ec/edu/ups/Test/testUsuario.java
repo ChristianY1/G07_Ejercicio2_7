@@ -2,7 +2,7 @@ package ec.edu.ups.Test;
 
 import ec.edu.ups.DAO.DAOFactory;
 
-public class testPaciente {
+public class testUsuario {
 
 	public static void main(String[] args) {
 		
