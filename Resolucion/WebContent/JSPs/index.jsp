@@ -5,9 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
+<title>goMedTor</title>
+<link rel="stylesheet" href="/Resolucion/CONFIG/Style/styleIndex.css" type="text/css"/>
 </head>
 <body>
-	<h1>hola mundo</h1>
+	<div class="login">
+		<h1><a href="/Resolucion/JSPs/RegistrarUsuario.jsp">Registrar Usuario</a></h1>
+	</div>
 </body>
 </html>
