@@ -11,8 +11,9 @@
 	<a href="/Resolucion/JSPs/index.jsp" style="font-size:x-large">Inicio</a>
 	
 	<form action="/Resolucion/RegistrarUsuario" method="POST">
+		<h1>Registro de nuevo usuario</h1><br>
 		<div class="container">
-			<h1>Registro de nuevo usuario</h1><br>
+			
 			<label for="nombre">Nombres:</label><br>
 			<input type="text" placeholder="nombre" name="nombre" required>
 			<br>

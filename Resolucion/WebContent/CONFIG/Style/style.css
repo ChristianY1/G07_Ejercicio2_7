@@ -1,5 +1,4 @@
 .container{
-  
     font-family: Arial, Helvetica, sans-serif;
     width: 40%;
   	margin: 0 auto;
@@ -41,7 +40,7 @@ input, select {
   /* Style the container for inputs */
   .container {
     background-color: #f1f1f1;
-    padding: 20px 20px;
+    padding: 20px 15px;
   }
   
   /* The message box is shown when the user clicks on the password field */
@@ -79,4 +78,7 @@ input, select {
     position: relative;
     left: -35px;
     content: "&#10006;";
+  }
+  h1{
+  	margin: 0 auto 0.5% 20%;
   }
