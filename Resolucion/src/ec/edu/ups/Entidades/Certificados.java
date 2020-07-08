@@ -16,11 +16,8 @@ public class Certificados implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String idCertificado;
-	
-	@ManyToOne
-	@JoinColumn
-	private Paciente paciente;
-	
+	private String nombre;
+	private String indentificacion;
 	@OneToOne
 	@JoinColumn
 	private ConsultaMedica datosConsulta;
@@ -31,14 +28,19 @@ public class Certificados implements Serializable {
 		super();
 	}
 
-	public Certificados(Paciente paciente, ConsultaMedica datosConsulta, String diagnosticoMedico,
+	
+	
+	public Certificados(String nombre, String indentificacion, ConsultaMedica datosConsulta, String diagnosticoMedico,
 			String consideracionesMedicas) {
 		super();
-		this.paciente = paciente;
+		this.nombre = nombre;
+		this.indentificacion = indentificacion;
 		this.datosConsulta = datosConsulta;
 		this.diagnosticoMedico = diagnosticoMedico;
 		this.consideracionesMedicas = consideracionesMedicas;
 	}
+
+
 
 	public String getIdCertificado() {
 		return idCertificado;
@@ -46,14 +48,6 @@ public class Certificados implements Serializable {
 
 	public void setIdCertificado(String idCertificado) {
 		this.idCertificado = idCertificado;
-	}
-
-	public Paciente getPaciente() {
-		return paciente;
-	}
-
-	public void setPaciente(Paciente paciente) {
-		this.paciente = paciente;
 	}
 
 	public ConsultaMedica getDatosConsulta() {
@@ -80,4 +74,30 @@ public class Certificados implements Serializable {
 		this.consideracionesMedicas = consideracionesMedicas;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getIndentificacion() {
+		return indentificacion;
+	}
+
+	public void setIndentificacion(String indentificacion) {
+		this.indentificacion = indentificacion;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Certificados [idCertificado=" + idCertificado + ", nombre=" + nombre + ", indentificacion="
+				+ indentificacion + ", datosConsulta=" + datosConsulta + ", diagnosticoMedico=" + diagnosticoMedico
+				+ ", consideracionesMedicas=" + consideracionesMedicas + "]";
+	}
+	
 }

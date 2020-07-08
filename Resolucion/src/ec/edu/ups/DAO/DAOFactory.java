@@ -11,7 +11,8 @@ public abstract class DAOFactory {
 		return factory;
 	}
 	
-	public abstract PacienteDAO getPacienteDAO();
+	public abstract UsuarioDAO getUsuarioDAO();
+	public abstract HistorialMedicoDAO getHistorialMedicoDAO();
 	public abstract CitaDAO getCitaDAO();
 	public abstract ConsultaMedicaDAO getConsultaMedicaDAO();
 	public abstract MedicinaDAO getMedicinaDAO();

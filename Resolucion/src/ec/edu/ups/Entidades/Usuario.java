@@ -25,11 +25,46 @@ public class Usuario implements Serializable {
 	private String cedula;
 	private String email;
 	private String contrasena;
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "usuario")
+	private HistorialMedico historial;
 	
 
 	public Usuario() {
 		super();
 	}
+
+	
+	
+	public Usuario(String nombre, String apellido, String fechaDeNacimiento, int edad, String sexo,
+			String telefono, String cedula, String email, String contrasena) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		FechaDeNacimiento = fechaDeNacimiento;
+		this.edad = edad;
+		this.sexo = sexo;
+		this.telefono = telefono;
+		this.cedula = cedula;
+		this.email = email;
+		this.contrasena = contrasena;
+	}
+	
+	
+	public Usuario(String nombre, String apellido, String fechaDeNacimiento, int edad, String sexo, String telefono,
+			String cedula, String email, String contrasena, HistorialMedico historial) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		FechaDeNacimiento = fechaDeNacimiento;
+		this.edad = edad;
+		this.sexo = sexo;
+		this.telefono = telefono;
+		this.cedula = cedula;
+		this.email = email;
+		this.contrasena = contrasena;
+		this.historial = historial;
+	}
+
 
 
 	public int getCodigo() {
@@ -130,6 +165,19 @@ public class Usuario implements Serializable {
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
 	}
+	
+	
+
+	public HistorialMedico getHistorial() {
+		return historial;
+	}
+
+
+
+	public void setHistorial(HistorialMedico historial) {
+		this.historial = historial;
+	}
+
 
 
 	@Override

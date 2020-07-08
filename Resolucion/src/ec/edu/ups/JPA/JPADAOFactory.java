@@ -6,16 +6,11 @@ import ec.edu.ups.DAO.ConsultaMedicaDAO;
 import ec.edu.ups.DAO.DAOFactory;
 import ec.edu.ups.DAO.FacturaDAO;
 import ec.edu.ups.DAO.FacturaDetalleDAO;
+import ec.edu.ups.DAO.HistorialMedicoDAO;
 import ec.edu.ups.DAO.MedicinaDAO;
-import ec.edu.ups.DAO.PacienteDAO;
+import ec.edu.ups.DAO.UsuarioDAO;
 
 public class JPADAOFactory extends DAOFactory {
-
-	@Override
-	public PacienteDAO getPacienteDAO() {
-		// TODO Auto-generated method stub
-		return new JPAPacienteDAO();
-	}
 
 	@Override
 	public CitaDAO getCitaDAO() {
@@ -51,6 +46,18 @@ public class JPADAOFactory extends DAOFactory {
 	public FacturaDetalleDAO getFacturaDetalleDAO() {
 		// TODO Auto-generated method stub
 		return new JPAFacturaDetalleDAO();
+	}
+
+	@Override
+	public UsuarioDAO getUsuarioDAO() {
+		// TODO Auto-generated method stub
+		return new JPAUsuarioDAO();
+	}
+
+	@Override
+	public HistorialMedicoDAO getHistorialMedicoDAO() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

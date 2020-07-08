@@ -17,6 +17,7 @@ public class ConsultaMedica implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String idConsulta;
 	private Date fechaConsulta;
 	private String motivoConsulta;
@@ -24,6 +25,7 @@ public class ConsultaMedica implements Serializable {
 	@OneToOne
 	@JoinColumn
 	private Cita cita;
+	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "consulta")
 	private Factura factura;
 	
@@ -35,6 +37,16 @@ public class ConsultaMedica implements Serializable {
 		super();
 	}
 
+	public ConsultaMedica(String idConsulta, Date fechaConsulta, String motivoConsulta, String datosExtras, Cita cita,
+			Factura factura) {
+		super();
+		this.idConsulta = idConsulta;
+		this.fechaConsulta = fechaConsulta;
+		this.motivoConsulta = motivoConsulta;
+		this.datosExtras = datosExtras;
+		this.cita = cita;
+		this.factura = factura;
+	}
 
 	public ConsultaMedica(Date fechaConsulta, String motivoConsulta, String datosExtras, Cita cita,
 			Factura factura, Certificados certificado) {
@@ -46,7 +58,7 @@ public class ConsultaMedica implements Serializable {
 		this.factura = factura;
 		this.certificado = certificado;
 	}
-
+	
 
 	public String getIdConsulta() {
 		return idConsulta;
@@ -117,6 +129,13 @@ public class ConsultaMedica implements Serializable {
 		this.certificado = certificado;
 	}
 
+	@Override
+	public String toString() {
+		return "ConsultaMedica [idConsulta=" + idConsulta + ", fechaConsulta=" + fechaConsulta + ", motivoConsulta="
+				+ motivoConsulta + ", datosExtras=" + datosExtras + ", cita=" + cita + ", factura=" + factura
+				+ ", certificado=" + certificado + "]";
+	}
 
+	
 	
 }
