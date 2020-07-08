@@ -4,8 +4,10 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import ec.edu.ups.DAO.GenericDAO;
+
 
 public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 	
@@ -33,6 +35,7 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 
 	@Override
 	public T read(ID id) {
+		System.out.println("Buscando...");
 		return em.find(persistentClass, id);
 	}
 
@@ -69,8 +72,23 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 
 	@Override
 	public List<T> find() {
+		em.getTransaction().begin();
+		List<T> lista = null;
+		try {
+			javax.persistence.criteria.CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
+			cq.select(cq.from(persistentClass));
+			lista = em.createQuery(cq).getResultList();
+			em.getTransaction().commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return lista;
+	}
+
+	@Override
+	public void deleteById(ID id) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 }

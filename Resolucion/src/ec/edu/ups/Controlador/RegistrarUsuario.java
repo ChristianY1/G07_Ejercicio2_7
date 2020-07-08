@@ -11,15 +11,15 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class RegistrarPaciente
  */
 @WebServlet("/RegistrarPaciente")
-public class RegistrarPaciente extends HttpServlet {
+public class RegistrarUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
   
-    public RegistrarPaciente() {
+    public RegistrarUsuario() {
         super();
         
     }
-
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
