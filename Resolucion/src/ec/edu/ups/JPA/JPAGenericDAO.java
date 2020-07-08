@@ -70,6 +70,7 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 		
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public List<T> find() {
 		em.getTransaction().begin();
