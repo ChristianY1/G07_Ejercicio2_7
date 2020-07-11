@@ -18,7 +18,7 @@ public class Factura implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String idFactura;
+	private int idFactura;
 	private String nombreFacturado;
 	private String indentificacion;
 	@OneToOne
@@ -45,12 +45,12 @@ public class Factura implements Serializable {
 	}
 
 
-	public String getIdFactura() {
+	public int getIdFactura() {
 		return idFactura;
 	}
 
 
-	public void setIdFactura(String idFactura) {
+	public void setIdFactura(int idFactura) {
 		this.idFactura = idFactura;
 	}
 
@@ -101,7 +101,6 @@ public class Factura implements Serializable {
 				+ indentificacion + ", consultaMedica=" + consultaMedica + ", detalles=" + detalles + "]";
 	}
 
-	
 	
 	
 }

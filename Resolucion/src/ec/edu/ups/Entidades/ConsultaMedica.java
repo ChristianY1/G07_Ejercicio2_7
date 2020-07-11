@@ -18,7 +18,7 @@ public class ConsultaMedica implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String idConsulta;
+	private int idConsulta;
 	
 	private Date fechaConsulta;
 	private String motivoConsulta;
@@ -52,12 +52,12 @@ public class ConsultaMedica implements Serializable {
 	}
 
 
-	public String getIdConsulta() {
+	public int getIdConsulta() {
 		return idConsulta;
 	}
 
 
-	public void setIdConsulta(String idConsulta) {
+	public void setIdConsulta(int idConsulta) {
 		this.idConsulta = idConsulta;
 	}
 

@@ -15,7 +15,7 @@ public class Certificados implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String codigo;
+	private int codigo;
 	
 	private String nombre;
 	private String identificacion;
@@ -44,12 +44,12 @@ public class Certificados implements Serializable {
 	}
 
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 
@@ -110,6 +110,7 @@ public class Certificados implements Serializable {
 				+ ", diagnosticoMedico=" + diagnosticoMedico + ", consideracionesMedicas=" + consideracionesMedicas
 				+ ", consultaMedica=" + consultaMedica + "]";
 	}
+
 
 	
 	

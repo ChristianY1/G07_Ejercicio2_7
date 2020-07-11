@@ -17,7 +17,7 @@ public class Cita implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String idCita;
+	private int idCita;
 	private String horaAsignada;
 	private Date fechaAsignada;
 	private boolean estadoCita;
@@ -39,11 +39,11 @@ public class Cita implements Serializable {
 		this.historial = historial;
 	}
 
-	public String getIdCita() {
+	public int getIdCita() {
 		return idCita;
 	}
 
-	public void setIdCita(String idCita) {
+	public void setIdCita(int idCita) {
 		this.idCita = idCita;
 	}
 
@@ -93,7 +93,6 @@ public class Cita implements Serializable {
 				+ ", estadoCita=" + estadoCita + ", historial=" + historial + ", consultaMedica=" + consultaMedica
 				+ "]";
 	}
-	
-	
+
 	
 }
