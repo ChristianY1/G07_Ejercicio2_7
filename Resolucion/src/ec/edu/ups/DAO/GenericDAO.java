@@ -20,5 +20,6 @@ public interface GenericDAO<T,ID> {
 	
 	public List<Usuario> buscarCorreo(String correo);
 	
+	Usuario buscar(String email, String contrasena);
 
 }
