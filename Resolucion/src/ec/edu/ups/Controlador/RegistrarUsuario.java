@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ec.edu.ups.Entidades.Usuario;
+
 /**
  * Servlet implementation class RegistrarPaciente
  */
@@ -26,6 +28,18 @@ public class RegistrarUsuario extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String fecha="";
+		String apellido="";
+		String cedula="";
+		String contrasena="";
+		int edad=0;
+		String email = "";
+		String nombre ="";
+		String sexo="";
+		String telefono="";
+		
+		Usuario usuario = new Usuario();
 		
 	}
 

@@ -21,7 +21,9 @@ public class HistorialMedico implements Serializable {
 	private int idHistorial;
 	private String tipoSangre;
 	private String historia;
+	
 	@OneToOne
+	@JoinColumn
 	private Usuario usuario;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "historial")
 	private List<Cita> listaCitas = new ArrayList<Cita>();

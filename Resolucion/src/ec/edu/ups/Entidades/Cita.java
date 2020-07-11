@@ -25,7 +25,7 @@ public class Cita implements Serializable {
 	@JoinColumn
 	private HistorialMedico historial;
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "cita")
-	private ConsultaMedica consulta;
+	private ConsultaMedica consultaMedica;
 
 	public Cita() {
 		super();
@@ -37,16 +37,6 @@ public class Cita implements Serializable {
 		this.fechaAsignada = fechaAsignada;
 		this.estadoCita = estadoCita;
 		this.historial = historial;
-	}
-
-	public Cita(String horaAsignada, Date fechaAsignada, boolean estadoCita, HistorialMedico historial,
-			ConsultaMedica consulta) {
-		super();
-		this.horaAsignada = horaAsignada;
-		this.fechaAsignada = fechaAsignada;
-		this.estadoCita = estadoCita;
-		this.historial = historial;
-		this.consulta = consulta;
 	}
 
 	public String getIdCita() {
@@ -89,19 +79,21 @@ public class Cita implements Serializable {
 		this.historial = historial;
 	}
 
-	public ConsultaMedica getConsulta() {
-		return consulta;
+	public ConsultaMedica getConsultaMedica() {
+		return consultaMedica;
 	}
 
-	public void setConsulta(ConsultaMedica consulta) {
-		this.consulta = consulta;
+	public void setConsultaMedica(ConsultaMedica consultaMedica) {
+		this.consultaMedica = consultaMedica;
 	}
 
 	@Override
 	public String toString() {
 		return "Cita [idCita=" + idCita + ", horaAsignada=" + horaAsignada + ", fechaAsignada=" + fechaAsignada
-				+ ", estadoCita=" + estadoCita + ", historial=" + historial + ", consulta=" + consulta + "]";
+				+ ", estadoCita=" + estadoCita + ", historial=" + historial + ", consultaMedica=" + consultaMedica
+				+ "]";
 	}
+	
 	
 	
 }
