@@ -53,13 +53,15 @@ public class IniciarSesion extends HttpServlet {
 			
 			correo= request.getParameter("user");
 			contrasena = request.getParameter("pwd");
+			System.out.println("Obteniendo datos del usuario");
+			System.out.println("usuario: "+usuDAO.buscar(correo, contrasena));
 			usuario = usuDAO.buscar(correo, contrasena);
 		}
 		
 		try {
 			if(usuario != null) {
 				request.setAttribute("usuario", usuario);
-				getServletContext().getRequestDispatcher("/JSPs/IndexPaciente.jsp").forward(request, response);
+				getServletContext().getRequestDispatcher("/JSPs/PrivadaPaciente/IndexPaciente.jsp").forward(request, response);
 			}else {
 				request.setAttribute("mensaje", "correo o contrasena incorrectos");
 				getServletContext().getRequestDispatcher("/JSPs/LogIn.jsp").forward(request, response);

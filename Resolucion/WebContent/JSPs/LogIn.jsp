@@ -11,7 +11,7 @@
 <br>
 	<div class="body">
 		<div class="login">
-			<form action="/Resolucion" method="POST">
+			<form action="/Resolucion/IniciarSesion" method="POST">
 				<input type="text" placeholder="Email" name="user" requiered><br>
 				<input type="password" placeholder="contrasena" name="pwd" requiered><br>
 				<button type="submit" name="resp" value="Login">Log In</button>

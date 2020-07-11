@@ -7,6 +7,13 @@
 <title>Bienvenido</title>
 </head>
 <body>
+<div class="topnav">
+	<a href="/JSPs/index.jsp">Home</a>
+	<a href="/Resolucion/CerrarSesion" style="float:right">Sing out</a>
+</div>
+<div class="body">
+	<h1>Buen inicio de sesion</h1>
+</div>
 
 </body>
 </html>
