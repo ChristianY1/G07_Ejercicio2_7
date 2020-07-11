@@ -16,6 +16,7 @@ public class Usuario implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codigo;
+	
 	private String nombre;
 	private String apellido;
 	private String FechaDeNacimiento;
@@ -25,6 +26,7 @@ public class Usuario implements Serializable {
 	private String cedula;
 	private String email;
 	private String contrasena;
+	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "usuario")
 	private HistorialMedico historial;
 	

@@ -15,64 +15,44 @@ public class Certificados implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String idCertificado;
+	private int codigo;
+	
 	private String nombre;
-	private String indentificacion;
-	@OneToOne
-	@JoinColumn
-	private ConsultaMedica datosConsulta;
+	private String identificacion;
+	
 	private String diagnosticoMedico;
 	private String consideracionesMedicas;
+	
+	@OneToOne
+	@JoinColumn
+	private ConsultaMedica consultaMedica;
+	
 
 	public Certificados() {
 		super();
 	}
 
-	
-	
-	public Certificados(String nombre, String indentificacion, ConsultaMedica datosConsulta, String diagnosticoMedico,
-			String consideracionesMedicas) {
+
+	public Certificados(String nombre, String identificacion, String diagnosticoMedico, String consideracionesMedicas,
+			ConsultaMedica consultaMedica) {
 		super();
 		this.nombre = nombre;
-		this.indentificacion = indentificacion;
-		this.datosConsulta = datosConsulta;
+		this.identificacion = identificacion;
 		this.diagnosticoMedico = diagnosticoMedico;
 		this.consideracionesMedicas = consideracionesMedicas;
+		this.consultaMedica = consultaMedica;
 	}
 
 
-
-	public String getIdCertificado() {
-		return idCertificado;
+	public int getCodigo() {
+		return codigo;
 	}
 
-	public void setIdCertificado(String idCertificado) {
-		this.idCertificado = idCertificado;
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 
-	public ConsultaMedica getDatosConsulta() {
-		return datosConsulta;
-	}
-
-	public void setDatosConsulta(ConsultaMedica datosConsulta) {
-		this.datosConsulta = datosConsulta;
-	}
-
-	public String getDiagnosticoMedico() {
-		return diagnosticoMedico;
-	}
-
-	public void setDiagnosticoMedico(String diagnosticoMedico) {
-		this.diagnosticoMedico = diagnosticoMedico;
-	}
-
-	public String getConsideracionesMedicas() {
-		return consideracionesMedicas;
-	}
-
-	public void setConsideracionesMedicas(String consideracionesMedicas) {
-		this.consideracionesMedicas = consideracionesMedicas;
-	}
 
 	public String getNombre() {
 		return nombre;
@@ -83,21 +63,55 @@ public class Certificados implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public String getIndentificacion() {
-		return indentificacion;
+
+	public String getIdentificacion() {
+		return identificacion;
 	}
 
-	public void setIndentificacion(String indentificacion) {
-		this.indentificacion = indentificacion;
+
+	public void setIdentificacion(String identificacion) {
+		this.identificacion = identificacion;
 	}
 
+
+	public String getDiagnosticoMedico() {
+		return diagnosticoMedico;
+	}
+
+
+	public void setDiagnosticoMedico(String diagnosticoMedico) {
+		this.diagnosticoMedico = diagnosticoMedico;
+	}
+
+
+	public String getConsideracionesMedicas() {
+		return consideracionesMedicas;
+	}
+
+
+	public void setConsideracionesMedicas(String consideracionesMedicas) {
+		this.consideracionesMedicas = consideracionesMedicas;
+	}
+
+
+	public ConsultaMedica getConsultaMedica() {
+		return consultaMedica;
+	}
+
+
+	public void setConsultaMedica(ConsultaMedica consultaMedica) {
+		this.consultaMedica = consultaMedica;
+	}
 
 
 	@Override
 	public String toString() {
-		return "Certificados [idCertificado=" + idCertificado + ", nombre=" + nombre + ", indentificacion="
-				+ indentificacion + ", datosConsulta=" + datosConsulta + ", diagnosticoMedico=" + diagnosticoMedico
-				+ ", consideracionesMedicas=" + consideracionesMedicas + "]";
+		return "Certificados [codigo=" + codigo + ", nombre=" + nombre + ", identificacion=" + identificacion
+				+ ", diagnosticoMedico=" + diagnosticoMedico + ", consideracionesMedicas=" + consideracionesMedicas
+				+ ", consultaMedica=" + consultaMedica + "]";
 	}
+
+
+	
 	
 }

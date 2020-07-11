@@ -2,11 +2,13 @@ package ec.edu.ups.JPA;
 
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import ec.edu.ups.DAO.GenericDAO;
+import ec.edu.ups.Entidades.Usuario;
 
 
 public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
@@ -90,6 +92,13 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 	public void deleteById(ID id) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public List<Usuario> buscarCorreo(String correo) {
+		Query nq = em.createNativeQuery("SELECT * FROM USUARIO where email=?", Usuario.class);
+		nq.setParameter(1,  correo);
+		return (List<Usuario>) nq.getResultList();
 	}
 
 }

@@ -18,54 +18,46 @@ public class ConsultaMedica implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String idConsulta;
+	private int idConsulta;
+	
 	private Date fechaConsulta;
 	private String motivoConsulta;
 	private String datosExtras;
+	
 	@OneToOne
 	@JoinColumn
 	private Cita cita;
 	
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "consulta")
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "consultaMedica")
 	private Factura factura;
 	
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "datosConsulta")
-	private Certificados certificado;
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "consultaMedica")
+	private Certificados certificados;
 	
 	
 	public ConsultaMedica() {
 		super();
 	}
 
-	public ConsultaMedica(String idConsulta, Date fechaConsulta, String motivoConsulta, String datosExtras, Cita cita,
-			Factura factura) {
-		super();
-		this.idConsulta = idConsulta;
-		this.fechaConsulta = fechaConsulta;
-		this.motivoConsulta = motivoConsulta;
-		this.datosExtras = datosExtras;
-		this.cita = cita;
-		this.factura = factura;
-	}
 
-	public ConsultaMedica(Date fechaConsulta, String motivoConsulta, String datosExtras, Cita cita,
-			Factura factura, Certificados certificado) {
+	public ConsultaMedica(Date fechaConsulta, String motivoConsulta, String datosExtras, Cita cita, Factura factura,
+			Certificados certificados) {
 		super();
 		this.fechaConsulta = fechaConsulta;
 		this.motivoConsulta = motivoConsulta;
 		this.datosExtras = datosExtras;
 		this.cita = cita;
 		this.factura = factura;
-		this.certificado = certificado;
+		this.certificados = certificados;
 	}
-	
 
-	public String getIdConsulta() {
+
+	public int getIdConsulta() {
 		return idConsulta;
 	}
 
 
-	public void setIdConsulta(String idConsulta) {
+	public void setIdConsulta(int idConsulta) {
 		this.idConsulta = idConsulta;
 	}
 
@@ -120,20 +112,21 @@ public class ConsultaMedica implements Serializable {
 	}
 
 
-	public Certificados getCertificado() {
-		return certificado;
+	public Certificados getCertificados() {
+		return certificados;
 	}
 
 
-	public void setCertificado(Certificados certificado) {
-		this.certificado = certificado;
+	public void setCertificados(Certificados certificados) {
+		this.certificados = certificados;
 	}
+
 
 	@Override
 	public String toString() {
 		return "ConsultaMedica [idConsulta=" + idConsulta + ", fechaConsulta=" + fechaConsulta + ", motivoConsulta="
 				+ motivoConsulta + ", datosExtras=" + datosExtras + ", cita=" + cita + ", factura=" + factura
-				+ ", certificado=" + certificado + "]";
+				+ ", certificados=" + certificados + "]";
 	}
 
 	

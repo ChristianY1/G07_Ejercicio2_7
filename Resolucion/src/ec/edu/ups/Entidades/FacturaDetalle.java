@@ -22,11 +22,14 @@ public class FacturaDetalle implements Serializable {
 	private String indicacionesConsumo;
 	private double totalConsulta;
 	private double totalPagar;
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "detalle")
-	private List<Medicina> medicinaList = new ArrayList<Medicina>();
 	@ManyToOne
 	@JoinColumn
 	private Factura factura;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "detalle")
+	private List<Medicina> medicinaList = new ArrayList<Medicina>();
+	
+	
 	
 	public FacturaDetalle() {
 		super();
