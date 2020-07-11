@@ -9,8 +9,10 @@
 <link rel="stylesheet" href="/Resolucion/CONFIG/Style/styleIndex.css" type="text/css"/>
 </head>
 <body>
+
 	<div class="login">
 		<h1><a href="/Resolucion/JSPs/RegistrarUsuario.jsp">Registrar Usuario</a></h1>
+		<a href="/Resolucion/JSPs/LogIn.jsp">Log in</a></p>
 	</div>
 </body>
 </html>

@@ -101,4 +101,12 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 		return (List<Usuario>) nq.getResultList();
 	}
 
+	@Override
+	public Usuario buscar(String email, String contrasena) {
+		Query nq = em.createNativeQuery("SELECT * FROM USUARIO WHERE email=? AND contrasena=?", Usuario.class);
+		nq.setParameter(1, email);
+		nq.setParameter(2, contrasena);
+		return (Usuario) nq.getSingleResult();
+	}
+
 }
