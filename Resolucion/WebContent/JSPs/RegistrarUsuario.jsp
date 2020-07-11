@@ -21,10 +21,13 @@
 			<input type="text" placeholder="apellido" name="apellido" required>
 			<br>
 			<label for="cedula">Numero de cedula:</label><br>
-			<input type="text" placeholder="Numero de cedula" name="cdi" required>
+			<input type="number" placeholder="Numero de cedula" name="cdi" required>
+			<br>
+			<label for="edad">Edad del paciente:</label><br>
+			<input type="number" placeholder="Edad del paciente" name="edad" required>
 			<br>
 			<label for="fechaNacimiento">Fecha Nacimiento:</label><br>
-    		<input type="date" id="fechaNacimiento" name="trip-start"
+    		<input type="date" id="fechaNacimiento" name="fecha"
        			value="1980-01-01"
        			min="1985-01-01" max="2020-12-31" required>
        			<br>

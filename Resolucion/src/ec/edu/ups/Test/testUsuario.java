@@ -12,11 +12,11 @@ public class testUsuario {
 		
 		UsuarioDAO usuDAO = DAOFactory.getdaDaoFactory().getUsuarioDAO();
 		CitaDAO ciDAO = DAOFactory.getdaDaoFactory().getCitaDAO();
-		//Usuario u = new Usuario("Pablo", "Calle", "1998/12/31",
-		//		21,"masculino","1212526582","125","test@gmail.com","123");
-		 //Paciente p = new Paciente("B+","No hay");
-		 //usuDAO.create(u);
-		 System.out.println("usuario creado: "+ciDAO.find());
+		Usuario u = new Usuario("Pablo", "Calle", "1998/12/31",
+				21,"masculino","1212526582","125","test@gmail.com","123");
+		
+		 usuDAO.create(u);
+		 System.out.println("usuario creado: "+usuDAO.find());
 		 
 		 
 	}

@@ -57,7 +57,7 @@ public class JPADAOFactory extends DAOFactory {
 	@Override
 	public HistorialMedicoDAO getHistorialMedicoDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPAHistorialMedicoDAO();
 	}
 
 }
