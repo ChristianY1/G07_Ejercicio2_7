@@ -90,8 +90,9 @@ public class JPAGenericDAO<T,ID> implements GenericDAO<T, ID> {
 
 	@Override
 	public void deleteById(ID id) {
-		// TODO Auto-generated method stub
-		
+		T entity = this.read(id);
+		if (entity != null)
+			this.delete(entity);	
 	}
 
 	@Override
